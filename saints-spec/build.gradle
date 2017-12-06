@@ -1,13 +1,13 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion 27
 
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion 26
+        targetSdkVersion 27
         versionCode 1
-        versionName "1.0.0"
+        versionName "1.0.2"
     }
 
     buildTypes {
@@ -33,7 +33,7 @@ def siteUrl = 'https://github.com/mylady/saints-specification-android' // 项目
 def gitUrl = 'https://github.com/mylady/saints-specification-android.git' // Git仓库的url。
 
 group = "cn.com.saints.spec"// 唯一包名,比如compile 'com.ansen.http:okhttpencapsulation:1.0.1'中的com.ansen.http就是这里配置的。
-version = "1.0.0"//项目引用的版本号，比如compile 'com.ansen.http:okhttpencapsulation:1.0.1'中的1.0.1就是这里配置的。
+version = "1.0.2"//项目引用的版本号，比如compile 'com.ansen.http:okhttpencapsulation:1.0.1'中的1.0.1就是这里配置的。
 
 install {
     repositories.mavenInstaller {
@@ -80,22 +80,7 @@ task sourcesJar(type: Jar) {
     classifier = 'sources'
 }
 
-// 生成jarDoc的task，不需要修改。
-task javadoc(type: Javadoc) {
-    source = android.sourceSets.main.java.srcDirs
-    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
-    // destinationDir = file("../javadoc/")
-    failOnError false // 忽略注释语法错误，如果用jdk1.8你的注释写的不规范就编译不过。
-}
-
-// 生成javaDoc的jar，不需要修改。
-task javadocJar(type: Jar, dependsOn: javadoc) {
-    classifier = 'javadoc'
-    from javadoc.destinationDir
-}
-
 artifacts {
-    archives javadocJar
     archives sourcesJar
 }
 
