@@ -12,4 +12,6 @@ public class TransmitMessageType {
     public static final int DigitalControl = 5;
     public static final int Maintain = 6;
     public static final int Hospital = 7;
+    public static final int Prison = 8;
+    public static final int BioIdentify = 9;
 }

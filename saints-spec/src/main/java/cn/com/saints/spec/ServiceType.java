@@ -26,4 +26,5 @@ public class ServiceType {
     public static final int ArcgisDynamicMapService = 1027;
     public static final int ArcgisTiledMapService = 1028;
     public static final int ArcgisGeometryService = 1029;
+    public static final int TileMapService = 1030;
 }
