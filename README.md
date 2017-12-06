@@ -1,2 +1,2 @@
-# saints-specification-java
-specification for java
+# saints-specification-android
+specification for android
