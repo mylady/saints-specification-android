@@ -51,6 +51,17 @@ public class FaceRollCallFeedback {
         this.prisonerFacePath = prisonerFacePath;
     }
 
+    @SerializedName("RollCallStatus")
+    private int rollCallStatus;
+
+    public int getRollCallStatus() {
+        return rollCallStatus;
+    }
+
+    public void setRollCallStatus(int rollCallStatus) {
+        this.rollCallStatus = rollCallStatus;
+    }
+
     @SerializedName("RollCallResult")
     private int rollCallResult;
 
