@@ -5,8 +5,7 @@ package cn.com.saints.spec;
  */
 
 public class PrisonRoomStatus {
-    public static final int Available = 0;
-    public static final int UnAvailable = 1;
-    public static final int Meeting = 2;
-    public static final int Arraigning = 3;
+    public static final int Unavailable = 0;
+    public static final int Free = 1;
+    public static final int Using = 2;
 }
